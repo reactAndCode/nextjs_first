@@ -11,6 +11,9 @@ export default function NavBar() {
           <Link href="/projects" className="text-zinc-700 dark:text-zinc-300 hover:underline">
             프로젝트
           </Link>
+          <Link href="/labs" className="text-zinc-700 dark:text-zinc-300 hover:underline">
+            API실습
+          </Link>
           <Link href="/about" className="text-zinc-700 dark:text-zinc-300 hover:underline">
             소개
           </Link>
