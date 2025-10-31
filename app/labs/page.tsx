@@ -277,7 +277,7 @@ function RandomTab() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/recommendations?count=20`, { cache: "no-store" });
+      const res = await fetch(`/api/recommendations?count=3`, { cache: "no-store" });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
         throw new Error(err.error || "추천을 불러오는 중 오류가 발생했습니다.");
