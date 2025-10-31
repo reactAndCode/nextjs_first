@@ -14,7 +14,8 @@ function normalizeTargetFrom(url: string): string {
 export async function GET(request: Request) {
   const target = normalizeTargetFrom(request.url);
   const count = getLikeCount(target);
-  const liked = cookies().get(`liked-${target}`)?.value === "1";
+  const cookieStore = await cookies();
+  const liked = cookieStore.get(`liked-${target}`)?.value === "1";
   return NextResponse.json({ target, count, liked }, { status: 200 });
 }
 
