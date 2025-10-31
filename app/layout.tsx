@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "바이브코딩 포트폴리오",
+  title: "바이브코딩 포트폴리오 251031 - 1",
   description: "내 코딩 결과물 포트폴리오 웹앱",
 };
 
