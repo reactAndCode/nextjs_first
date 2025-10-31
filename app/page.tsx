@@ -11,7 +11,7 @@ export default function Home() {
             <Image src="/globe.svg" alt="Hero" fill className="object-contain dark:invert" />
           </div>
         </div>
-        <h1 className="text-4xl font-bold tracking-tight text-foreground">My 바이브코딩 헬로우 월드</h1>
+        <h1 className="text-4xl font-bold tracking-tight text-foreground">My Vibe Coding Hello World </h1>
         <p className="mt-3 text-muted-foreground">내 코딩 결과물 포트폴리오 웹앱</p>
         <div className="mt-6 flex items-center justify-center gap-3">
           <Button asChild variant="default">
