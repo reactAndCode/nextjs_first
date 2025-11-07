@@ -74,6 +74,39 @@ export type Database = {
         }
         Relationships: []
       }
+      about_interests: {
+        Row: {
+          id: string
+          title: string
+          description: string
+          icon: string
+          color: string
+          display_order: number
+          active: boolean
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          title: string
+          description: string
+          icon?: string
+          color?: string
+          display_order?: number
+          active?: boolean
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          title?: string
+          description?: string
+          icon?: string
+          color?: string
+          display_order?: number
+          active?: boolean
+          created_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

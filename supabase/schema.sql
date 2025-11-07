@@ -26,6 +26,18 @@ create table if not exists public.quotes (
   created_at timestamptz not null default now()
 );
 
+-- About interests table
+create table if not exists public.about_interests (
+  id uuid primary key default gen_random_uuid(),
+  title varchar(100) not null,
+  description text not null,
+  icon varchar(10) not null default '•',
+  color varchar(20) not null default 'indigo',
+  display_order integer not null default 0,
+  active boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
 -- RPC: increment like atomically
 create or replace function public.increment_like(like_target text)
 returns integer
@@ -64,3 +76,5 @@ $$;
 -- create policy "likes_update_public" on public.likes for update using (true) with check (true);
 -- alter table public.quotes enable row level security;
 -- create policy "quotes_select_public" on public.quotes for select using (active);
+-- alter table public.about_interests enable row level security;
+-- create policy "about_interests_select_public" on public.about_interests for select using (active);
